@@ -25,7 +25,7 @@
 			);
 		}
 		
-		function register(&controller) {
+		function register(&$controller) {
 			$controller->register_hook('ACTION_ACT_PREPROCESS', 'BEFORE', $this, 'add_page');
 		}
 		
