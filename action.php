@@ -24,5 +24,13 @@
 				'url'		=> 'http://github.com/myles/dokuwiki-plugin-add_page'
 			);
 		}
+		
+		function register(&controller) {
+			$controller->register_hook('ACTION_ACT_PREPROCESS', 'BEFORE', $this, 'add_page');
+		}
+		
+		function add_page(&$event) {
+			
+		}
 	}
 ?>
