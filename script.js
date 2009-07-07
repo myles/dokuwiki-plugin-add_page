@@ -21,5 +21,7 @@ function init_add_page() {
 
 function add_page_clicked(e) {
 	var page_name = prompt("Add Page");
-	window.location.href = $('dokuwiki_url').value + page_name
+	if (page_name != "" && page_name != null) {
+		window.location.href = $('dokuwiki_url').value + page_name
+	};
 }

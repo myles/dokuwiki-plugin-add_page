@@ -1,3 +1,4 @@
 DokuWiki Plugin: Add Page
 =========================
 
+Opens a JavaScript prompt asking you the name of the page.
