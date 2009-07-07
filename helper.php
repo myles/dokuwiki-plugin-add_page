@@ -55,18 +55,17 @@
 			}
 			
 			$link_type = $this->getConf('link_type');
-			
 			switch ($link_type) {
 			case 'link':
 				$ret .= '<a rel="nofollow" href="#" style="display:none;" id="add_page_button" class="action add_page">' . $label . '</a>';
 				break;
 			default:
 				$ret .= '<form class="button" action="' . $url .'"><div class="no">';
-				$ret .= '<input id="add_page_button" type="button" value="' . htmlspecialchars($label) . '" class="button" ';
-				$ret .= 'title="' . $tip . '" ';
-				// the button will be enabled by js, as it does not
-				// make any sense in a browser without js ;)
+				$ret .= '<input id="add_page_button" type="button" ';
+				$ret .= 'value="' . htmlspecialchars($label) . '" class="button" ';
 				$ret .= 'style="display: none;" ';
+				$ret .= 'accesskey="a" ';
+				$ret .= 'title="' . $tip . ' [A]" ';
 				$ret .= '/>';
 				$ret .= '<input id="dokuwiki_url" value="' . $url .'" type="hidden" />';
 				$ret .= '</div>';
