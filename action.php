@@ -30,7 +30,7 @@
 		}
 		
 		function add_page(&$event) {
-			
+			return '';
 		}
 	}
 ?>
